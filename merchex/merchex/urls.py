@@ -19,5 +19,6 @@ from listings import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('topic/', views.topic)
+    path('topic/', views.topic_list, name = 'topic-list'),
+    path('topic/<int:id>/', views.topic_details, name = 'topic-details')
 ]

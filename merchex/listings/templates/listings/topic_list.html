@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Topic</title>
+</head>
+
+<body>
+
+    <h1> Liste des topics : </h1>
+    <ul>
+        {% for topic in topics %}
+        <li> <a href="{% url 'topic-details' topic.id %}"> {{topic.name}} </a> </li>
+        {% endfor %}
+    </ul>
+
+</body>
+
+</html>
